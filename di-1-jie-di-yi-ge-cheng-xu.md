@@ -2,7 +2,7 @@
 
 什么是单片机？单片机是如何运行的？单片机运行时有什么效果？
 
-![](.gitbook/assets/chap1_img1_baidubaike.png)
+![](.gitbook/assets/chap1\_img1\_baidubaike.png)
 
 百度百科总能告诉我们一些正确但是无助于理解的东西，在这次实验中，我们将通过实际运行一个代码来理解单片机是什么。
 
@@ -13,7 +13,7 @@
 * 将你手上的USB Mini连接线一端插入Arduino的接口，另一端连接到你的电脑。
 * 稍等片刻，应该能听到系统的硬件接入提示音，同时，Arduino上的电源灯会亮起，用户灯可能会闪烁。此时Arduino的电源已经接通。
 
-![](.gitbook/assets/chap1_img2_nanojiegou.png)
+![](.gitbook/assets/chap1\_img2\_nanojiegou.png)
 
 {% hint style="info" %}
 如果灯不亮，请向我们反馈。
@@ -22,17 +22,17 @@
 * 打开设备管理器（右键点击任务栏Windows徽标按钮），选择“设备管理器”。
 * 你应该能在“端口 (COM 和 LPT)”一栏下看到名为“USB-SERIAL CH340 (COM3)”的设备，如图所示。此时你的Arduino已经正常连接。**根据接口不同，你看到的设备名称中“COM”后的数字序号可能不同，这没有关系，但是请记下此处的数字序号，我们将在后续步骤中用到它。**
 
-![](.gitbook/assets/chap1_img3_shebeiguanliqi.png)
+![](.gitbook/assets/chap1\_img3\_shebeiguanliqi.png)
 
 {% hint style="info" %}
-如果你没有找到这个设备，或者设备的图标带有叹号标志，或者系统提示无法识别的USB设备等，请确认已按【节0.2】的说明安装了驱动，如果问题仍无法解决，请向我们反馈。
+如果你没有找到这个设备，或者设备的图标带有叹号标志，或者系统提示无法识别的USB设备等，请确认已按[【§0.2】](di-0-jie-zhun-bei.md#0.2-huan-jing-pei-zhi)的说明安装了驱动，如果问题仍无法解决，请向我们反馈。
 {% endhint %}
 
 ## §1.2 第一个程序
 
 下面给出我们将要运行的程序：[【src/chap1\_code1\_blink/chap1\_code1\_blink.ino】](https://www.jianguoyun.com/p/DQpVhxQQmcGwBxjsjpsE)
 
-```
+```arduino
 // setup函数将在单片机通电时自动开始运行，仅运行一次
 void setup() {
   // 设置LED_BUILTIN引脚（这个引脚连接至Arduino上的用户指示灯）为输出模式
@@ -71,7 +71,7 @@ Arduino程序的语法和C或者C++非常相似，不一样的是Arduino程序�
 
 在进行第一次上传之前，我们需要先认识一下Arduino IDE的界面。
 
-![](.gitbook/assets/chap1_img4_idejiemian.png)
+![](.gitbook/assets/chap1\_img4\_idejiemian.png)
 
 * 代码区是你写程序代码的地方。
 * 编译信息区会显示你程序的编译和上传情况。
@@ -82,26 +82,22 @@ Arduino程序的语法和C或者C++非常相似，不一样的是Arduino程序�
 
 Arduino包括一系列的多种型号，为了让IDE能编译出型号相符的程序，接下来需要进行一些配置。
 
-![](.gitbook/assets/chap1_img5_idepeizhi.png)
+![](.gitbook/assets/chap1\_img5\_idepeizhi.png)
 
 配置完成后，点击“编译”。如果一切正常，你将看到编译完成的提示，表示你的程序没有语法错误。
 
-![](.gitbook/assets/chap1_img6_idebianyi.png)
-
-如果出现编译错误，请检查代码是否正确地输入，比如大小写错误、中英文标点错误等都可能导致程序编译失败。
+![](.gitbook/assets/chap1\_img6\_idebianyi.png)
 
 {% hint style="info" %}
-如果你不能确定问题，请向我们反馈。
+如果出现编译错误，请检查代码是否正确地输入，比如大小写错误、中英文标点错误等都可能导致程序编译失败。如果你不能确定问题，请向我们反馈。
 {% endhint %}
 
 编译完成后，点击“上传”，如果之前的配置正确，你将看到上传成功的提示，表示程序已经成功上传到了Arduino中，并且已经开始运行。
 
-![](.gitbook/assets/chap1_img7_ideshangchuan.png)
-
-如果没有成功，请检查自己在编译配置，部分Arduino Nano在选择处理器时可能需要选择“ATmega328P (Old Bootloader)”。
+![](.gitbook/assets/chap1\_img7\_ideshangchuan.png)
 
 {% hint style="info" %}
-如果你不能确定问题，请向我们反馈。
+如果没有成功，请检查自己在编译配置，部分Arduino Nano在选择处理器时可能需要选择“ATmega328P (Old Bootloader)”。如果你不能确定问题，请向我们反馈。
 {% endhint %}
 
 如果一切正常，Arduino板上的用户指示灯应该已经按之前所说开始闪烁，1秒亮，1秒灭。
@@ -114,11 +110,16 @@ Arduino包括一系列的多种型号，为了让IDE能编译出型号相符的�
 
 任务：在上面程序的基础上进行修改，使用户指示灯按SOS摩尔斯电码（三短三长三短）的规律点亮。你可以假定短亮为500ms，长亮为1000ms，两次亮起的间隔为300ms，整段SOS完成之后等待1000ms。
 
+{% tabs %}
+{% tab title="防剧透页" %}
+【剧透警告！！！】
+{% endtab %}
+
+{% tab title="参考代码" %}
 参考代码：[【src/chap1\_code2\_sos/chap1\_code2\_sos.ino】](https://www.jianguoyun.com/p/DQpVhxQQmcGwBxjsjpsE)
 
-【剧透警告！！！】
-
-```
+{% code title="chap1_code2_sos.ino" %}
+```arduino
 void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
 }
@@ -148,3 +149,6 @@ void loop() {
   delay(1000);
 }
 ```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
