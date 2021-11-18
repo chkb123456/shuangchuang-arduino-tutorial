@@ -6,7 +6,11 @@
 
 我们要连接的电路如下图，请按和上一节实验中一样的方法连接电路。
 
+![](.gitbook/assets/chap3_img1_blink.png)
+
+{% hint style="info" %}
 **再次强调：在连接电路时，务必断开Arduino到电脑的连接，以免在通电的情况下错误连接导线烧毁元件。**
+{% endhint %}
 
 可以看到，这个电路和上个实验的电路相似，唯一的区别是，原本一端接在Arduino上侧3V3引脚的红色导线，现在接到了Arduino下侧的D7引脚。D7引脚和其他的D2\~D13引脚一样，属于Arduino的GPIO接口（通用输入输出接口），通俗地说，就是Arduino可以通过程序控制的接口。
 
@@ -14,9 +18,10 @@
 
 ## §3.2 编写并上传程序
 
-下面给出我们将要运行的程序：【src/chap3\_code1\_blink/chap3\_code1\_blink.ino】
+下面给出我们将要运行的程序：[【src/chap3\_code1\_blink/chap3\_code1\_blink.ino】](https://www.jianguoyun.com/p/DQpVhxQQmcGwBxjsjpsE)
 
-```
+{% code title="chap3_code1_blink.ino" %}
+```arduino
 // setup函数将在单片机通电时自动开始运行，仅运行一次
 void setup() {
   // 设置7号引脚（也就是D7引脚）为输出模式
@@ -32,6 +37,7 @@ void loop() {
   delay(1000);            // 等待1秒
 }
 ```
+{% endcode %}
 
 这个程序的功能和第一节的实验相似，不同的是，在运行时，它将会闪烁面包板上连接的LED。
 
@@ -39,21 +45,34 @@ void loop() {
 
 接下来，按照第一节实验中同样的过程，将代码上传到Arduino。如果一切正常，你将会看到之前接在面包板上的LED开始闪烁。
 
-如果没能成功，请再次检查接线、引脚以及代码是否和教程一致。_如果你不能确定问题，请向我们反馈。_
+{% hint style="info" %}
+如果没能成功，请再次检查接线、引脚以及代码是否和教程一致。如果你不能确定问题，请向我们反馈。
+{% endhint %}
 
 ## §3.3 _更进一步_
 
-任务：设计一个红绿灯电路，并为其编写程序，你可以假定绿灯、黄灯、红灯交替亮起，各亮一秒。在这个电路中，你需要用到红黄绿三色的LED，以及3个电阻。**注意：不能使用一个电阻为多个LED限流，因此，不要并联LED或电阻。**
+任务：设计一个红绿灯电路，并为其编写程序，你可以假定绿灯、黄灯、红灯交替亮起，各亮一秒。在这个电路中，你需要用到红黄绿三色的LED，以及3个电阻。
 
+{% hint style="info" %}
+**注意：不能使用一个电阻为多个LED限流，因此，不要并联LED或电阻。**
+{% endhint %}
+
+{% tabs %}
+{% tab title="防剧透页" %}
+【剧透警告！！！】
+{% endtab %}
+
+{% tab title="参考电路" %}
 参考电路：
 
-【剧透警告！！！】
+![](.gitbook/assets/chap3_img2_traffic.png)
+{% endtab %}
 
-参考代码：【src/chap3\_code2\_traffic/chap3\_code2\_traffic.ino】
+{% tab title="参考代码" %}
+参考代码：[【src/chap3\_code2\_traffic/chap3\_code2\_traffic.ino】](https://www.jianguoyun.com/p/DQpVhxQQmcGwBxjsjpsE)
 
-【剧透警告！！！】
-
-```
+{% code title="chap3_code2_traffic.ino" %}
+```arduino
 void setup() {
   pinMode(7, OUTPUT);     // D7引脚连接红色LED
   pinMode(8, OUTPUT);     // D8引脚连接黄色LED
@@ -77,3 +96,6 @@ void loop() {
   delay(1000);            // 等待1秒
 }
 ```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
