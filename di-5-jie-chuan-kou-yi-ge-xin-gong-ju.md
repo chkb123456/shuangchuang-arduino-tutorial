@@ -127,7 +127,7 @@ void loop() {
 {% endtab %}
 
 {% tab title="参考代码" %}
-参考程序：\[【src/chap5\_code3\_pong/chap5\_code3\_pong.ino】]\(https://www.jianguoyun.com/p/DQpVhxQQmcGwBxjsjpsE)
+参考程序：[【src/chap5\_code3\_pong/chap5\_code3\_pong.ino】](https://www.jianguoyun.com/p/DQpVhxQQmcGwBxjsjpsE)
 
 {% code title="chap5_code2_serialinput.ino" %}
 ```arduino
