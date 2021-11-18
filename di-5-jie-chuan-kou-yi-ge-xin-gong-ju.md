@@ -8,11 +8,11 @@
 
 又是百度百科，不过对我们来说，串口可以简单的理解成一个可以双向传输数据（通常是字符文本等）的通道，就像运行C语言程序时的控制台窗口，既可以输入，也可以显示输出，就像这样：
 
-![](.gitbook/assets/chap5\_img1\_cyuyanshurushuchu.png)
+![C语言程序通过控制台的输入输出](.gitbook/assets/chap5\_img1\_cyuyanshurushuchu.png)
 
 和上图中的情况差不多，串口也可以实现类似的输入输出功能，大概像这个样子：
 
-![](.gitbook/assets/chap5\_img2\_chuankoushurushuchu.png)
+![Arduino通过串口的输入输出](.gitbook/assets/chap5\_img2\_chuankoushurushuchu.png)
 
 在下文中，我们将会介绍如何应用串口，让你的Arduino可以和你进行文字交流。在本章节的这两个实验中，你无需连接电路。
 
@@ -49,11 +49,11 @@ void loop() {
 
 上传程序之后，我们需要打开串口监视器才能看到Arduino通过串口输出的内容，如图，点击串口监视器按钮。
 
-![](.gitbook/assets/chap5\_img3\_chuankoujianshiqi.png)
+![Arduino IDE主界面](.gitbook/assets/chap5\_img3\_chuankoujianshiqi.png)
 
 串口监视器的界面如图所示，打开串口监视器后，程序会自动开始执行，输出会显示在窗口的输出框中。
 
-![](.gitbook/assets/chap5\_img4\_chuankoujianshiqijiemian.png)
+![串口监视器主界面](.gitbook/assets/chap5\_img4\_chuankoujianshiqijiemian.png)
 
 {% hint style="info" %}
 如果看不到输出或输出乱码等错误情况，请再次检查代码和相应配置是否和教程一致。如果你不能确定问题，请向我们反馈。
@@ -103,7 +103,7 @@ void loop() {
 
 上传程序之后，打开串口监视器，在上方的输入框中输入两个数字，点击发送，就可以看到Arduino输出了数字和的结果，如图。
 
-![](.gitbook/assets/chap5\_img2\_chuankoushurushuchu.png)
+![Arduino通过串口的输入输出](.gitbook/assets/chap5\_img2\_chuankoushurushuchu.png)
 
 {% hint style="info" %}
 如果看不到输出或输出乱码等错误情况，请再次检查代码和相应配置是否和教程一致。如果你不能确定问题，请向我们反馈。
@@ -113,7 +113,7 @@ void loop() {
 
 任务：利用上述串口输出函数，实现一个按钮触发的输出装置，在按钮按下时输出一行文本“`Pong!`”。
 
-提示：你可以参考[【§4.1】](di-4-jie-cong-shu-chu-dao-shu-ru.md#4.2-bian-xie-bing-shang-chuan-cheng-xu)中的程序，记得在按钮按下后的动作中添加延时以避免重复触发。
+提示：你可以参考[【§4.2】](di-4-jie-cong-shu-chu-dao-shu-ru.md#4.2-bian-xie-bing-shang-chuan-cheng-xu)中的程序，记得在按钮按下后的动作中添加延时以避免重复触发。
 
 {% tabs %}
 {% tab title="防剧透页" %}
@@ -123,7 +123,7 @@ void loop() {
 {% tab title="参考电路" %}
 参考电路：
 
-![](.gitbook/assets/chap5\_img5\_pong.png)
+![参考电路](.gitbook/assets/chap5\_img5\_pong.png)
 {% endtab %}
 
 {% tab title="参考代码" %}

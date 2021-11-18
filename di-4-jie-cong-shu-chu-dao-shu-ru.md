@@ -6,11 +6,11 @@
 
 我们要连接的电路如下图。
 
-![](.gitbook/assets/chap4\_img1\_button.png)
+![电路示意图](.gitbook/assets/chap4\_img1\_button.png)
 
 和上一节实验的电路相比，电路图上多出了一个轻触按钮开关，开关的一端连接至电源负极，另一端通过黄色导线连接至Arduino的D8引脚。在连接轻触开关时，需要注意开关的朝向和安放方法，这里先介绍一下轻触开关的结构，如图。
 
-![](.gitbook/assets/chap4\_img2\_qingchukaiguanjiegou.png)
+![轻触按钮开关的结构](.gitbook/assets/chap4\_img2\_qingchukaiguanjiegou.png)
 
 简单来说，就是按钮长边上的两个引脚之间总是导通，短边上的两个引脚之间只在按钮按下时导通。对于上面的电路，就是当按钮按下时，D8引脚将会通过按钮导通至电源负极，输入为低电平；当按钮未按下时，D8引脚并未连接至任何地方，处于“悬空”状态。
 
@@ -66,7 +66,7 @@ void loop() {
 {% tab title="参考电路" %}
 参考电路：
 
-![](.gitbook/assets/chap4\_img3\_toggle.png)
+![参考电路](.gitbook/assets/chap4\_img3\_toggle.png)
 {% endtab %}
 
 {% tab title="参考代码" %}

@@ -98,14 +98,14 @@
 
 * 在出现的界面中，依次点击“I Agree”，“Next”和“Install”。
 
-![](.gitbook/assets/chap0\_img15\_ideanzhuang2.png)
+![Arduino IDE安装界面](.gitbook/assets/chap0\_img15\_ideanzhuang2.png)
 
-![](.gitbook/assets/chap0\_img16\_ideanzhuang3.png)
+![Arduino IDE安装界面](.gitbook/assets/chap0\_img16\_ideanzhuang3.png)
 
-![](.gitbook/assets/chap0\_img17\_ideanzhuang4.png)
+![Arduino IDE安装界面](.gitbook/assets/chap0\_img17\_ideanzhuang4.png)
 
 * 如显示“Completed”，说明安装已经完成，点击“Close”结束安装程序。
 
-![](.gitbook/assets/chap0\_img18\_ideanzhuang5.png)
+![Arduino IDE安装完成界面](.gitbook/assets/chap0\_img18\_ideanzhuang5.png)
 
 至此，环境配置完成，接下来，我们将进入真正的实验流程。

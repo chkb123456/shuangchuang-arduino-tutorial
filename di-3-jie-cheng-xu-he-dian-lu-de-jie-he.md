@@ -6,7 +6,7 @@
 
 我们要连接的电路如下图，请按和上一节实验中一样的方法连接电路。
 
-![](.gitbook/assets/chap3\_img1\_blink.png)
+![电路示意图](.gitbook/assets/chap3\_img1\_blink.png)
 
 {% hint style="info" %}
 **再次强调：在连接电路时，务必断开Arduino到电脑的连接，以免在通电的情况下错误连接导线烧毁元件。**
@@ -63,7 +63,7 @@ void loop() {
 {% tab title="参考电路" %}
 参考电路：
 
-![](.gitbook/assets/chap3\_img2\_traffic.png)
+![参考电路](.gitbook/assets/chap3\_img2\_traffic.png)
 {% endtab %}
 
 {% tab title="参考代码" %}
