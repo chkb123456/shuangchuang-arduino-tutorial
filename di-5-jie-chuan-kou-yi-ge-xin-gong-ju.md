@@ -2,27 +2,23 @@
 
 在上一个实验中，我们已经尝试了利用GPIO引脚作为单片机的输入输出，但是，电平高低的输入和输出只有两种状态，并不能满足我们对复杂输入输出的需求。比如，我们需要知道程序内某个变量当前的值，在电脑上编写C程序时，我们可以使用`printf`等函数输出它的值。而在Arduino上，是否存在这样的方式呢？答案是肯定的，这就是我们接下来要介绍的——串口。
 
-
-
 ## §5.1 串口介绍
 
 > 串口全称串行接口，也称串行通信接口或串行通讯接口（通常指COM接口），是采用串行通信方式的扩展接口。串行接口 （Serial Interface）是指数据一位一位地顺序传送。其特点是通信线路简单，只要一对传输线就可以实现双向通信（可以直接利用电话线作为传输线），从而大大降低了成本，特别适用于远距离通信，但传送速度较慢。
 
 又是百度百科，不过对我们来说，串口可以简单的理解成一个可以双向传输数据（通常是字符文本等）的通道，就像运行C语言程序时的控制台窗口，既可以输入，也可以显示输出，就像这样：
 
-![](.gitbook/assets/chap5_img1_cyuyanshurushuchu.png)
+![](.gitbook/assets/chap5\_img1\_cyuyanshurushuchu.png)
 
 和上图中的情况差不多，串口也可以实现类似的输入输出功能，大概像这个样子：
 
-![](.gitbook/assets/chap5_img2_chuankoushurushuchu.png)
+![](.gitbook/assets/chap5\_img2\_chuankoushurushuchu.png)
 
 在下文中，我们将会介绍如何应用串口，让你的Arduino可以和你进行文字交流。在本章节的这两个实验中，你无需连接电路。
 
-
-
 ## §5.2 一个串口输出程序
 
-下面给出我们将要运行的程序：[【src/chap5\_code1\_serialoutput/chap5\_code1\_serialoutput.ino】](https://www.jianguoyun.com/p/DQpVhxQQmcGwBxjsjpsE\)
+下面给出我们将要运行的程序：\[【src/chap5\_code1\_serialoutput/chap5\_code1\_serialoutput.ino】]\(https://www.jianguoyun.com/p/DQpVhxQQmcGwBxjsjpsE)
 
 {% code title="chap5_code1_serialoutput.ino" %}
 ```arduino
@@ -53,22 +49,21 @@ void loop() {
 
 上传程序之后，我们需要打开串口监视器才能看到Arduino通过串口输出的内容，如图，点击串口监视器按钮。
 
-![](.gitbook/assets/chap5_img3_chuankoujianshiqi.png)
+![](.gitbook/assets/chap5\_img3\_chuankoujianshiqi.png)
 
 串口监视器的界面如图所示，打开串口监视器后，程序会自动开始执行，输出会显示在窗口的输出框中。
 
-![](.gitbook/assets/chap5_img4_chuankoujianshiqijiemian.png)
+![](.gitbook/assets/chap5\_img4\_chuankoujianshiqijiemian.png)
 
 {% hint style="info" %}
 如果看不到输出或输出乱码等错误情况，请再次检查代码和相应配置是否和教程一致。如果你不能确定问题，请向我们反馈。
 {% endhint %}
 
-
 ## §5.3 一个串口输入程序
 
 仅仅能通过串口输入显然是不够的，接下来我们介绍如何通过串口向Arduino输入数据。
 
-下面给出我们将要运行的程序：[【src/chap5\_code2\_serialinput/chap5\_code2\_serialinput.ino】](https://www.jianguoyun.com/p/DQpVhxQQmcGwBxjsjpsE\)
+下面给出我们将要运行的程序：\[【src/chap5\_code2\_serialinput/chap5\_code2\_serialinput.ino】]\(https://www.jianguoyun.com/p/DQpVhxQQmcGwBxjsjpsE)
 
 {% code title="chap5_code2_serialinput.ino" %}
 ```arduino
@@ -108,18 +103,17 @@ void loop() {
 
 上传程序之后，打开串口监视器，在上方的输入框中输入两个数字，点击发送，就可以看到Arduino输出了数字和的结果，如图。
 
-![](.gitbook/assets/chap5_img2_chuankoushurushuchu.png)
+![](.gitbook/assets/chap5\_img2\_chuankoushurushuchu.png)
 
 {% hint style="info" %}
 如果看不到输出或输出乱码等错误情况，请再次检查代码和相应配置是否和教程一致。如果你不能确定问题，请向我们反馈。
 {% endhint %}
 
-
 ## §5.4 再进一步
 
 任务：利用上述串口输出函数，实现一个按钮触发的输出装置，在按钮按下时输出一行文本“`Pong!`”。
 
-提示：你可以参考【§4.1】中的程序，记得在按钮按下后的动作中添加延时以避免重复触发。
+提示：你可以参考[【§4.1】](di-4-jie-cong-shu-chu-dao-shu-ru.md#4.2-bian-xie-bing-shang-chuan-cheng-xu)中的程序，记得在按钮按下后的动作中添加延时以避免重复触发。
 
 {% tabs %}
 {% tab title="防剧透页" %}
@@ -129,11 +123,11 @@ void loop() {
 {% tab title="参考电路" %}
 参考电路：
 
-![](.gitbook/assets/chap5_img5_pong.png)
+![](.gitbook/assets/chap5\_img5\_pong.png)
 {% endtab %}
 
 {% tab title="参考代码" %}
-参考程序：[【src/chap5\_code3\_pong/chap5\_code3\_pong.ino】](https://www.jianguoyun.com/p/DQpVhxQQmcGwBxjsjpsE\)
+参考程序：\[【src/chap5\_code3\_pong/chap5\_code3\_pong.ino】]\(https://www.jianguoyun.com/p/DQpVhxQQmcGwBxjsjpsE)
 
 {% code title="chap5_code2_serialinput.ino" %}
 ```arduino
