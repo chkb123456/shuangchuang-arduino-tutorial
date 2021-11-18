@@ -37,7 +37,7 @@
 
 ![](.gitbook/assets/chap2\_img6\_mianbaobanjiegou.png)
 
-再来一张面包板背面的图片以供理解：
+下面是一张面包板背面的图片以供理解：
 
 ![](.gitbook/assets/chap2\_img7\_mianbaobanbeimian.jpg)
 
