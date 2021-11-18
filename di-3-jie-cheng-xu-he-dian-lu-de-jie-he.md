@@ -6,7 +6,7 @@
 
 我们要连接的电路如下图，请按和上一节实验中一样的方法连接电路。
 
-![](.gitbook/assets/chap3_img1_blink.png)
+![](.gitbook/assets/chap3\_img1\_blink.png)
 
 {% hint style="info" %}
 **再次强调：在连接电路时，务必断开Arduino到电脑的连接，以免在通电的情况下错误连接导线烧毁元件。**
@@ -41,7 +41,7 @@ void loop() {
 
 这个程序的功能和第一节的实验相似，不同的是，在运行时，它将会闪烁面包板上连接的LED。
 
-程序的代码和第一节的代码相比，唯一的区别是，调用pinMode和digitalWrite函数的时候，传入的参数不再是LED\_BUILTIN，而是7。7代表7号引脚，也就是Ardunio上印着D7的引脚。这样的引脚都可以通过pinMode指定输入输出模式，并使用digitalWrite设置其输出的电平高低。
+程序的代码和第一节的代码相比，唯一的区别是，调用`pinMode`和`digitalWrite`函数的时候，传入的参数不再是`LED_BUILTIN`，而是7。7代表7号引脚，也就是Ardunio上印着D7的引脚。这样的引脚都可以通过`pinMode`指定输入输出模式，并使用`digitalWrite`设置其输出的电平高低。
 
 接下来，按照第一节实验中同样的过程，将代码上传到Arduino。如果一切正常，你将会看到之前接在面包板上的LED开始闪烁。
 
@@ -65,7 +65,7 @@ void loop() {
 {% tab title="参考电路" %}
 参考电路：
 
-![](.gitbook/assets/chap3_img2_traffic.png)
+![](.gitbook/assets/chap3\_img2\_traffic.png)
 {% endtab %}
 
 {% tab title="参考代码" %}

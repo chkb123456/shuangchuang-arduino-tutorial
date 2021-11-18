@@ -6,11 +6,11 @@
 
 我们要连接的电路如下图。
 
-![](.gitbook/assets/chap4_img1_button.png)
+![](.gitbook/assets/chap4\_img1\_button.png)
 
 和上一节实验的电路相比，电路图上多出了一个轻触按钮开关，开关的一端连接至电源负极，另一端通过黄色导线连接至Arduino的D8引脚。在连接轻触开关时，需要注意开关的朝向和安放方法，这里先介绍一下轻触开关的结构，如图。
 
-![](.gitbook/assets/chap4_img2_qingchukaiguanjiegou.png)
+![](.gitbook/assets/chap4\_img2\_qingchukaiguanjiegou.png)
 
 简单来说，就是按钮长边上的两个引脚之间总是导通，短边上的两个引脚之间只在按钮按下时导通。对于上面的电路，就是当按钮按下时，D8引脚将会通过按钮导通至电源负极，输入为低电平；当按钮未按下时，D8引脚并未连接至任何地方，处于“悬空”状态。
 
@@ -18,7 +18,7 @@
 
 ## §4.2 编写并上传程序
 
-下面给出我们将要运行的程序：【src/chap4\_code1\_button/chap4\_code1\_button.ino】
+下面给出我们将要运行的程序：[【src/chap4\_code1\_button/chap4\_code1\_button.ino】](https://www.jianguoyun.com/p/DQpVhxQQmcGwBxjsjpsE\))
 
 {% code title="chap4_code1_button.ino" %}
 ```arduino
@@ -43,8 +43,8 @@ void loop() {
 
 这个程序的功能是，当按钮被按下时，让LED亮一秒。
 
-* pinMode的新模式——INPUT\_PULLUP（输入上拉）：输入上拉模式是一种特殊的输入模式，在这个模式下，引脚将在内部被连接到一个上拉电阻，从而在引脚悬空时能够读取到高电平，且不影响低电平的读取。与之相比，当处于普通的输入模式INPUT时，若引脚悬空，则读取到的电平高低是无法预料的随机值。因此，为了满足按钮的特性，我们需要使用输入上拉模式来在按钮未按下，引脚悬空时，读取到稳定的高电平。
-* 电平 = digitalWrite(引脚名或引脚编号)：这个函数和digitalWrite函数相对，作用是读取对应引脚当前从外界输入的电平，并将其作为返回值返回给你的程序。你可以把这个值存在变量里，也可以直接对它进行判断。
+> * `pinMode`的新模式——`INPUT_PULLUP`（输入上拉）：输入上拉模式是一种特殊的输入模式，在这个模式下，引脚将在内部被连接到一个上拉电阻，从而在引脚悬空时能够读取到高电平，且不影响低电平的读取。与之相比，当处于普通的输入模式INPUT时，若引脚悬空，则读取到的电平高低是无法预料的随机值。因此，为了满足按钮的特性，我们需要使用输入上拉模式来在按钮未按下，引脚悬空时，读取到稳定的高电平。
+> * `电平 = digitalWrite(引脚名或引脚编号)`：这个函数和`digitalWrite`函数相对应，作用是读取对应引脚当前从外界输入的电平，并将其作为返回值返回给你的程序。你可以把这个值存在变量里，也可以直接对它进行判断。
 
 接下来，按照第一节实验中同样的过程，将代码上传到Arduino，此时LED应该处于熄灭状态。按下按钮，如果一切正常，你将会看到LED开始闪烁。
 
@@ -64,7 +64,7 @@ void loop() {
 {% tab title="参考电路" %}
 参考电路：
 
-![](.gitbook/assets/chap4_img3_toggle.png)
+![](.gitbook/assets/chap4\_img3\_toggle.png)
 {% endtab %}
 
 {% tab title="参考代码" %}
