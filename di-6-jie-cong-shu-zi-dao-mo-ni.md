@@ -1,11 +1,91 @@
 # 第6节：从数字到模拟
 
-在上一个实验中，我们已经尝试了利用GPIO引脚作为单片机的输入输出，但是，电平高低的输入和输出只有两种状态，并不能满足我们对复杂输入输出的需求。比如，我们需要知道程序内某个变量当前的值，在电脑上编写C程序时，我们可以使用printf等函数输出它的值。而在Arduino上，是否存在这样的方式呢？答案是肯定的，这就是我们接下来要介绍的——串口。
+你可能会好奇，为什么对引脚电平进行读取和设置的函数名字叫“`digitalRead`”和“`digitalWrite`”呢？
 
-## §5.1 串口介绍
+函数名中“`digital`”是数字的意思，这个数字并非我们常说的数字，而是表示它的信号以数字形式产生和传输，其中最常见的数字形式就是二进制的高低电平，高电平5V表示1，低电平0V表示0，这样就能将信息编码成一连串的二进制0或1，输出或者输入。
 
-## §5.2 一个串口输出程序
+然而，电压并非一个非0即5的值，在0V和5V之间，我们可以选取任意的电压，并让不同电压的大小表示一定的信息。假设我们用0V表示灯熄灭，5V表示灯完全亮起，则2.5V就可以表示灯发出弱光。
 
-## §5.3 一个串口输入程序
+这样用连续电压代表信息的表示方式，就是模拟形式“`analog`”。当然，上面只是对模拟信号的一个不精确的比喻，不过已经足够你理解本节的内容。
 
-## §5.4 再进一步
+
+
+## §6.1 电路连接
+
+本次实验的电路和【§3.1】的电路基本相同，注意这次的电路使用了D9引脚：
+
+![](.gitbook/assets/chap6_img1_fading.png)
+
+这里使用D9引脚的原因是，只有D3、D5、D6、D9、D10、D11可以用作模拟输出，你也可以将D9换成这6个引脚中的任何一个。
+
+
+
+## §6.2 编写并上传程序
+
+下面给出这次实验的程序：[【src/chap6_code1_fading/chap6_code1_fading.ino】](https://www.jianguoyun.com/p/DQpVhxQQmcGwBxjsjpsE)
+
+{% code title="chap6_code1_fading.ino" %}
+```arduino
+void setup() {
+  pinMode(9, OUTPUT);                   // 将D9引脚设为输出模式，只有D3、D5、D6、D9、D10、D11可以用作模拟输出
+}
+
+void loop() {
+  // analogWrite将0V到5V的电压均分为256级，用0到255表示，0表示输出电压为0V，255表示输出电压为5V
+  for (int i = 0; i <= 255; i += 5) {   // 这个循环的自变量i表示亮度，从0V到5V均匀变亮
+    analogWrite(9, i);                  // 将亮度以模拟形式写入D9引脚
+    delay(30);                          // 等待一会以让变量的过程可以被看到
+  }
+  for (int i = 255; i >= 0; i -= 5) {   // 这个循环的自变量i表示亮度，从5V到0V均匀熄灭
+    analogWrite(9, i);                  // 将亮度以模拟形式写入D9引脚
+    delay(30);                          // 等待一会以让变量的过程可以被看到
+  }
+}
+```
+{% endcode %}
+
+
+
+## §6.3 _更进一步_
+
+任务：让红色和绿色的两个LED交替亮灭，此处的亮灭需和上文实验一样具有呼吸效果。
+
+提示：两个LED需要被分配到上文中提到的几个引脚中，才能实现呼吸效果。若其中一个的当前亮度是`i`，另一个的亮度可以是`255 - i`。
+
+{% tabs %}
+{% tab title="防剧透页" %}
+【剧透警告！！！】
+{% endtab %}
+
+{% tab title="参考电路" %}
+参考电路：
+
+![](.gitbook/assets/chap6_img2_2fading.png)
+{% endtab %}
+
+{% tab title="参考代码" %}
+参考代码：[【src/chap6_code2_2fading/chap6_code2_2fading.ino】](https://www.jianguoyun.com/p/DQpVhxQQmcGwBxjsjpsE)
+
+{% code title="chap6_code2_2fading.ino" %}
+```arduino
+void setup() {
+  pinMode(5, OUTPUT);                   // 将D5、D6引脚设为输出模式
+  pinMode(6, OUTPUT);
+}
+
+void loop() {
+  for (int i = 0; i <= 255; i += 5) {
+    analogWrite(5, i);                  // D5从暗变亮
+    analogWrite(6, 255 - i);            // D6从亮变暗
+    delay(30);
+  }
+  for (int i = 255; i >= 0; i -= 5) {
+    analogWrite(5, i);                  // D5从亮变暗
+    analogWrite(6, 255 - i);            // D6从暗变亮
+    delay(30);
+  }
+}
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}

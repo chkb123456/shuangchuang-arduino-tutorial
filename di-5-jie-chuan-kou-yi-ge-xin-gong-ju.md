@@ -2,6 +2,8 @@
 
 在上一个实验中，我们已经尝试了利用GPIO引脚作为单片机的输入输出，但是，电平高低的输入和输出只有两种状态，并不能满足我们对复杂输入输出的需求。比如，我们需要知道程序内某个变量当前的值，在电脑上编写C程序时，我们可以使用`printf`等函数输出它的值。而在Arduino上，是否存在这样的方式呢？答案是肯定的，这就是我们接下来要介绍的——串口。
 
+
+
 ## §5.1 串口介绍
 
 > 串口全称串行接口，也称串行通信接口或串行通讯接口（通常指COM接口），是采用串行通信方式的扩展接口。串行接口 （Serial Interface）是指数据一位一位地顺序传送。其特点是通信线路简单，只要一对传输线就可以实现双向通信（可以直接利用电话线作为传输线），从而大大降低了成本，特别适用于远距离通信，但传送速度较慢。
@@ -16,9 +18,11 @@
 
 在下文中，我们将会介绍如何应用串口，让你的Arduino可以和你进行文字交流。在本章节的这两个实验中，你无需连接电路。
 
+
+
 ## §5.2 一个串口输出程序
 
-下面给出我们将要运行的程序：\[【src/chap5\_code1\_serialoutput/chap5\_code1\_serialoutput.ino】]\(https://www.jianguoyun.com/p/DQpVhxQQmcGwBxjsjpsE)
+下面给出我们将要运行的程序：[【src/chap5\_code1\_serialoutput/chap5\_code1\_serialoutput.ino】](https://www.jianguoyun.com/p/DQpVhxQQmcGwBxjsjpsE)
 
 {% code title="chap5_code1_serialoutput.ino" %}
 ```arduino
@@ -59,11 +63,13 @@ void loop() {
 如果看不到输出或输出乱码等错误情况，请再次检查代码和相应配置是否和教程一致。如果你不能确定问题，请向我们反馈。
 {% endhint %}
 
+
+
 ## §5.3 一个串口输入程序
 
 仅仅能通过串口输入显然是不够的，接下来我们介绍如何通过串口向Arduino输入数据。
 
-下面给出我们将要运行的程序：\[【src/chap5\_code2\_serialinput/chap5\_code2\_serialinput.ino】]\(https://www.jianguoyun.com/p/DQpVhxQQmcGwBxjsjpsE)
+下面给出我们将要运行的程序：[【src/chap5\_code2\_serialinput/chap5\_code2\_serialinput.ino】](https://www.jianguoyun.com/p/DQpVhxQQmcGwBxjsjpsE)
 
 {% code title="chap5_code2_serialinput.ino" %}
 ```arduino
@@ -79,7 +85,7 @@ void loop() {
   while (!Serial.available());            // 等待直到串口收到数据
   a = Serial.parseInt();                  // 读取a和b的值
   b = Serial.parseInt();
-  Serial.println("");                     // 换行
+  Serial.println();                       // 换行
   Serial.print("The sum of ");            // 输出a和b的和
   Serial.print(a);
   Serial.print(" and ");
@@ -109,7 +115,9 @@ void loop() {
 如果看不到输出或输出乱码等错误情况，请再次检查代码和相应配置是否和教程一致。如果你不能确定问题，请向我们反馈。
 {% endhint %}
 
-## §5.4 再进一步
+
+
+## §5.4 _更进一步_
 
 任务：利用上述串口输出函数，实现一个按钮触发的输出装置，在按钮按下时输出一行文本“`Pong!`”。
 
@@ -127,7 +135,7 @@ void loop() {
 {% endtab %}
 
 {% tab title="参考代码" %}
-参考程序：\[【src/chap5\_code3\_pong/chap5\_code3\_pong.ino】]\(https://www.jianguoyun.com/p/DQpVhxQQmcGwBxjsjpsE)
+参考程序：[【src/chap5\_code3\_pong/chap5\_code3\_pong.ino】](https://www.jianguoyun.com/p/DQpVhxQQmcGwBxjsjpsE)
 
 {% code title="chap5_code2_serialinput.ino" %}
 ```arduino
