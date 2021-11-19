@@ -6,21 +6,17 @@
 
 一旦掌握了一种外设的驱动方法，我们就可以举一反三，通过其他外设的文档，以及我们的经验和理解，快速掌握其他外设的驱动方法。
 
-
-
 ## §7.1 电路连接
 
 本次实验的电路如图：
 
-![chap7_circ1_beeper](.gitbook/assets/chap7_img1_beeper.png)
+![chap7\_circ1\_beeper](.gitbook/assets/chap7\_img1\_beeper.png)
 
 注意真实的蜂鸣器和示意图中的蜂鸣器有所不同，真实的蜂鸣器的两个引脚固定在蜂鸣器地步，直接横跨面包板中间凹槽插在面包板上即可。
 
-
-
 ## §7.2 编写并上传程序
 
-本次实验的代码如下：[【src/chap7_code1_beeper/chap7_code1_beeper.ino】](https://www.jianguoyun.com/p/DQpVhxQQmcGwBxjsjpsE)
+本次实验的代码如下：[【src/chap7\_code1\_beeper/chap7\_code1\_beeper.ino】](https://www.jianguoyun.com/p/DQpVhxQQmcGwBxjsjpsE)
 
 {% code title="chap7_code1_beeper.ino" %}
 ```arduino
@@ -44,17 +40,12 @@ void loop() {
 
 运行上述程序，应该能听到蜂鸣器一断一续的响声。
 
-
-
 ## §7.3 _更进一步_
 
-任务：关于蜂鸣器，其实并没有更多复杂的用法了，不过，本次任务中，你可以试着用这个蜂鸣器播放一段音乐，下面的程序是一个简单的示例，你也可以修改程序的内容以播放你自己喜欢的音乐。
-
-提示：你可以参考《音符和频率对应关系表》。
-
-参考电路：本次实验的电路和上文相同。
-
-参考代码：[【src/chap7_code2_music/chap7_code2_music.ino】](https://www.jianguoyun.com/p/DQpVhxQQmcGwBxjsjpsE)
+* 任务：关于蜂鸣器，其实并没有更多复杂的用法了，不过，本次任务中，你可以试着用这个蜂鸣器播放一段音乐，下面的程序是一个简单的示例，你也可以修改程序的内容以播放你自己喜欢的音乐。
+* 提示：你可以参考《音符和频率对应关系表》。
+* 参考电路：本次实验的电路和上文相同。
+* 参考代码：[【src/chap7\_code2\_music/chap7\_code2\_music.ino】](https://www.jianguoyun.com/p/DQpVhxQQmcGwBxjsjpsE)
 
 {% code title="chap7_code2_music.ino" %}
 ```arduino
