@@ -8,21 +8,17 @@
 
 这样用连续电压代表信息的表示方式，就是模拟形式“`analog`”。当然，上面只是对模拟信号的一个不精确的比喻，不过已经足够你理解本节的内容。
 
-
-
 ## §6.1 电路连接
 
-本次实验的电路和【§3.1】的电路基本相同，注意这次的电路使用了D9引脚：
+本次实验的电路和[【§3.1】](di-3-jie-cheng-xu-he-dian-lu-de-jie-he.md#3.1-dian-lu-lian-jie)的电路基本相同，注意这次的电路使用了D9引脚：
 
-![](.gitbook/assets/chap6_img1_fading.png)
+![](.gitbook/assets/chap6\_img1\_fading.png)
 
 这里使用D9引脚的原因是，只有D3、D5、D6、D9、D10、D11可以用作模拟输出，你也可以将D9换成这6个引脚中的任何一个。
 
-
-
 ## §6.2 编写并上传程序
 
-下面给出这次实验的程序：[【src/chap6_code1_fading/chap6_code1_fading.ino】](https://www.jianguoyun.com/p/DQpVhxQQmcGwBxjsjpsE)
+下面给出这次实验的程序：[【src/chap6\_code1\_fading/chap6\_code1\_fading.ino】](https://www.jianguoyun.com/p/DQpVhxQQmcGwBxjsjpsE)
 
 {% code title="chap6_code1_fading.ino" %}
 ```arduino
@@ -44,8 +40,6 @@ void loop() {
 ```
 {% endcode %}
 
-
-
 ## §6.3 _更进一步_
 
 任务：让红色和绿色的两个LED交替亮灭，此处的亮灭需和上文实验一样具有呼吸效果。
@@ -60,11 +54,11 @@ void loop() {
 {% tab title="参考电路" %}
 参考电路：
 
-![](.gitbook/assets/chap6_img2_2fading.png)
+![](.gitbook/assets/chap6\_img2\_2fading.png)
 {% endtab %}
 
 {% tab title="参考代码" %}
-参考代码：[【src/chap6_code2_2fading/chap6_code2_2fading.ino】](https://www.jianguoyun.com/p/DQpVhxQQmcGwBxjsjpsE)
+参考代码：[【src/chap6\_code2\_2fading/chap6\_code2\_2fading.ino】](https://www.jianguoyun.com/p/DQpVhxQQmcGwBxjsjpsE)
 
 {% code title="chap6_code2_2fading.ino" %}
 ```arduino
