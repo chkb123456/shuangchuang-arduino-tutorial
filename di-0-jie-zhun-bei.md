@@ -13,7 +13,7 @@
 你的手上应该有这些装备：
 
 * 一个Arduino Nano：这玩意颜值不大行，名字看上去也相当怪异，但它是今天的主角，至少在本实验中，它就是我们的单片机。另外，我们把那一根根针叫做引脚。
-  * _如果你感兴趣的话，Arduino是意大利语，来自1000年前意大利国王Arduin的名字；Nano表示小，和它的兄弟【Arduino Uno】相比，确实是个小个子，对不_。
+  * _如果你感兴趣的话，Arduino是意大利语，来自1000年前意大利国王Arduin的名字；Nano表示小，和它的兄弟Arduino Uno相比，它确实是个小个子，对不_。
 
 ![Arduino Nano](.gitbook/assets/chap0\_img1\_arduinonano.jpg)
 
@@ -65,8 +65,6 @@
   * _加上个指针，或许可以用来做一个声音强度指示器？_
 
 ![SG90舵机](.gitbook/assets/chap0\_img10\_duoji.jpg)
-
-
 
 ## §0.2 环境配置
 
