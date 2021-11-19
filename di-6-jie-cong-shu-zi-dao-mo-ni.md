@@ -12,7 +12,7 @@
 
 本次实验的电路和[【§3.1】](di-3-jie-cheng-xu-he-dian-lu-de-jie-he.md#3.1-dian-lu-lian-jie)的电路基本相同，注意这次的电路使用了D9引脚：
 
-![](.gitbook/assets/chap6\_img1\_fading.png)
+![参考电路](.gitbook/assets/chap6\_img1\_fading.png)
 
 这里使用D9引脚的原因是，只有D3、D5、D6、D9、D10、D11可以用作模拟输出，你也可以将D9换成这6个引脚中的任何一个。
 
@@ -54,7 +54,7 @@ void loop() {
 {% tab title="参考电路" %}
 参考电路：
 
-![](.gitbook/assets/chap6\_img2\_2fading.png)
+![参考电路](.gitbook/assets/chap6\_img2\_2fading.png)
 {% endtab %}
 
 {% tab title="参考代码" %}
