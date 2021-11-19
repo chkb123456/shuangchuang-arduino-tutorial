@@ -15,7 +15,7 @@
 * 一个Arduino Nano：这玩意颜值不大行，名字看上去也相当怪异，但它是今天的主角，至少在本实验中，它就是我们的单片机。另外，我们把那一根根针叫做引脚。
   * _如果你感兴趣的话，Arduino是意大利语，来自1000年前意大利国王Arduin的名字；Nano表示小，和它的兄弟Arduino Uno相比，它确实是个小个子，对不_。
 
-![Arduino Nano](.gitbook/assets/chap0\_img1\_arduinonano.jpg)
+![Arduino Nano](chap0_img1_arduinonano.jpg)
 
 * 一根USB Mini数据线：用来连接Arduino和你的电脑。
   * _移动互联网时代的一级文物，小心保存这玩意，要是弄丢了就只能到你家的旧手机堆里去另找一根了。_
